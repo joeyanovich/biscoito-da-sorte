@@ -1,3 +1,8 @@
+:root {
+  --h2: #34355B
+  --p: #34355B
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,96 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+
+  padding: 0 2rem;
+  margin-bottom: 1000px;
+
+  background-size: 200% 200%;
+  animation: bgAnimation 10s ease infinite;
+
   background: linear-gradient(45deg, #190361 0%, #B0F 100%);
 }
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 100%;
+  width: 26.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.75rem;
+
+  padding: 4rem;
+
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--h2);
+}
+
+.text p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+
+  color: var(--p);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:hover {
+  animation: cookieAnimation 0.2s infinite;
+}
+
+button img {
+  width: 100%;
+  max-width: 15.625rem;
+}
+
+@keyframes cookieAnimation {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
